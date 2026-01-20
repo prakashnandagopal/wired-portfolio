@@ -241,19 +241,19 @@
             </div>
 
             <!-- Case Study Narrative Grid -->
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
+            <div class="mb-16">
                 <!-- Text Content -->
                 <div class="space-y-6">
                     <div>
                         <h3 class="text-xl font-bold text-gray-900 mb-2">The Challenge</h3>
                         <p class="text-gray-600 leading-relaxed">
-                            The BME had a rich database of 50 years of music history, but it was locked in static lists. Visitors couldn't "see" the influence of one artist on another. They needed a way to explore connections—not just search for names.
+                            The BME had a rich database of over 50 years of music history, but it was locked in static lists. Visitors couldn't "see" the influence of one artist on another. They needed a way to explore connections—not just search for names.
                         </p>
                     </div>
                     <div>
                         <h3 class="text-xl font-bold text-gray-900 mb-2">The Solution</h3>
                         <p class="text-gray-600 leading-relaxed">
-                            I architected a <strong>Knowledge Graph</strong> powered by a Headless CMS (Strapi). Instead of traditional pagination, I built a semantic search interface where queries return "Nodes" (Artists) connected by "Edges" (Influence/Genre).
+                            I developed a <strong>Knowledge Graph</strong> powered by a Headless CMS (Strapi). Instead of traditional pagination, I built a semantic search interface where queries return "Nodes" (Artists) connected by "Edges" (Influence/Genre).
                         </p>
                     </div>
                     <div>
@@ -263,29 +263,17 @@
                         </p>
                     </div>
                 </div>
-
-                <!-- Live Interactive Demo (Simulation) -->
-                <div class="bg-white rounded-xl shadow-lg border border-gray-200 p-4 flex flex-col">
-                    <div class="flex justify-between items-center mb-4 border-b border-gray-100 pb-2">
-                        <span class="text-xs font-bold uppercase text-gray-500">Live Component Demo</span>
-                        <div class="flex space-x-2">
-                            <span class="w-3 h-3 rounded-full bg-red-500"></span>
-                            <span class="w-3 h-3 rounded-full bg-yellow-500"></span>
-                            <span class="w-3 h-3 rounded-full bg-green-500"></span>
-                        </div>
-                    </div>
-                    <!-- Plotly Chart Container -->
-                    <div id="knowledgeGraph" class="flex-grow w-full h-[300px] bg-gray-50 rounded-lg overflow-hidden relative">
-                        <!-- Chart renders here -->
-                    </div>
-                    <p class="text-xs text-center text-gray-400 mt-2 italic">Interactive: Click nodes to simulate semantic drill-down.</p>
-                </div>
             </div>
 
             <!-- Visual Strategy -->
-            <div class="bg-gray-100 rounded-xl p-8 border border-dashed border-gray-300 text-center">
-                <p class="text-gray-500 font-medium">[Placeholder for BME Interface Screenshots]</p>
-                <p class="text-xs text-gray-400 mt-2">Insert images: Search UI, Graph View, Mobile View</p>
+            <div class="bg-gray-100 rounded-xl overflow-hidden shadow-md border border-gray-200">
+                <video class="w-full h-auto" controls autoplay muted loop>
+                    <source src="assets/bme-dashboard-demo.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <div class="p-4 bg-white border-t border-gray-100">
+                    <p class="text-sm font-medium text-gray-900 text-center">Live Interface Demo: Semantic Search & Graph Navigation</p>
+                </div>
             </div>
         </section>
 
@@ -293,7 +281,7 @@
         <section id="impact" class="content-section">
             <div class="mb-10">
                 <h2 class="text-3xl font-bold serif text-gray-900 mb-2">The Condé Nast Impact</h2>
-                <p class="text-gray-600">Bridging Infrastructure, Editorial Tools, and Frontend Innovation (2020-2024).</p>
+                <p class="text-gray-600">Bridging Infrastructure, Editorial Tools, and Frontend Innovation (2020-2024). I am familiar with the content workflows and systems as I was part of the team.</p>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
@@ -369,12 +357,12 @@
 
     </main>
 
-    <footer class="bg-white border-t border-gray-200 mt-12 py-8">
+    <!-- <footer class="bg-white border-t border-gray-200 mt-12 py-8">
         <div class="max-w-6xl mx-auto px-4 text-center">
             <p class="text-gray-500 text-sm">Designed & Engineered by Prakash Nandagopal for WIRED.</p>
             <p class="text-gray-400 text-xs mt-2">Built with Tailwind, Chart.js, and Plotly. Single Page Application.</p>
         </div>
-    </footer>
+    </footer> -->
 
     <!-- JAVASCRIPT LOGIC -->
     <script>
@@ -487,41 +475,6 @@
                     }
                 }
             });
-
-            // --- CHART 2: KNOWLEDGE GRAPH SIMULATION (Plotly.js) ---
-            const nodes = [
-                { id: 'David Bowie', group: 1, size: 25 }, { id: 'Glam Rock', group: 2, size: 15 },
-                { id: 'Queen', group: 1, size: 20 }, { id: 'London', group: 3, size: 10 },
-                { id: '1970s', group: 4, size: 10 }, { id: 'Fashion', group: 2, size: 12 },
-                { id: 'T-Rex', group: 1, size: 15 }
-            ];
-            const x = [0.5, 0.2, 0.8, 0.5, 0.5, 0.3, 0.7];
-            const y = [0.5, 0.7, 0.7, 0.3, 0.8, 0.4, 0.6];
-            
-            const traceNodes = {
-                x: x, y: y,
-                mode: 'markers+text',
-                text: nodes.map(n => n.id),
-                textposition: 'top center',
-                marker: {
-                    size: nodes.map(n => n.size * 1.5),
-                    color: nodes.map(n => n.group === 1 ? '#DC2626' : '#1F2937'),
-                    opacity: 0.9
-                },
-                type: 'scatter',
-                hoverinfo: 'text'
-            };
-
-            const layoutGraph = {
-                margin: { t: 20, b: 20, l: 20, r: 20 },
-                showlegend: false,
-                xaxis: { showgrid: false, zeroline: false, showticklabels: false },
-                yaxis: { showgrid: false, zeroline: false, showticklabels: false },
-                paper_bgcolor: 'rgba(0,0,0,0)',
-                plot_bgcolor: 'rgba(0,0,0,0)',
-                dragmode: 'pan'
-            };
-            Plotly.newPlot('knowledgeGraph', [traceNodes], layoutGraph, {displayModeBar: false, responsive: true});
 
             // --- CHART 3: SPECTRA COST SAVINGS (Chart.js) ---
             const ctxCost = document.getElementById('costChart').getContext('2d');
