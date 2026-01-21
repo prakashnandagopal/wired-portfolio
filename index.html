@@ -58,7 +58,7 @@
                 </div>
                 <div class="hidden sm:flex space-x-8 items-center">
                     <button onclick="navTo('manifesto')" id="nav-manifesto" class="nav-item text-gray-500 hover:text-gray-900 px-1 pt-1 text-sm font-medium transition-colors">Manifesto</button>
-                    <button onclick="navTo('resume')" id="nav-resume" class="nav-item text-gray-500 hover:text-gray-900 px-1 pt-1 text-sm font-medium transition-colors">Strategic CV</button>
+                    <button onclick="navTo('resume')" id="nav-resume" class="nav-item text-gray-500 hover:text-gray-900 px-1 pt-1 text-sm font-medium transition-colors">Projects</button>
                     <button onclick="navTo('casestudy')" id="nav-casestudy" class="nav-item text-gray-500 hover:text-gray-900 px-1 pt-1 text-sm font-medium transition-colors">Case Study: BME</button>
                     <button onclick="navTo('impact')" id="nav-impact" class="nav-item text-gray-500 hover:text-gray-900 px-1 pt-1 text-sm font-medium transition-colors">Condé Impact</button>
                 </div>
@@ -73,7 +73,7 @@
         <!-- Mobile Menu Dropdown -->
         <div id="mobile-menu" class="hidden sm:hidden bg-white border-b border-gray-200 pb-4">
             <button onclick="navTo('manifesto')" class="block w-full text-left px-4 py-2 text-gray-600 hover:bg-gray-50">Manifesto</button>
-            <button onclick="navTo('resume')" class="block w-full text-left px-4 py-2 text-gray-600 hover:bg-gray-50">Strategic CV</button>
+            <button onclick="navTo('resume')" class="block w-full text-left px-4 py-2 text-gray-600 hover:bg-gray-50">Projects</button>
             <button onclick="navTo('casestudy')" class="block w-full text-left px-4 py-2 text-gray-600 hover:bg-gray-50">Case Study: BME</button>
             <button onclick="navTo('impact')" class="block w-full text-left px-4 py-2 text-gray-600 hover:bg-gray-50">Condé Impact</button>
         </div>
@@ -95,11 +95,11 @@
                     <div class="prose prose-lg text-gray-700">
                         <p class="font-semibold text-gray-900">To the WIRED Engineering & Editorial Team,</p>
                         
-                        <p>I know the WIRED tech stack because I helped build it. As a Senior Software Engineer at Condé Nast, I spent four years architecting the core systems—specifically <strong>Spectra</strong> (Image Engine) and <strong>Encore</strong> (Syndication)—that deliver your content to millions.</p>
+                        <p>I know the WIRED tech stack because I was part of the platform team. As a Software Engineer at Condé Nast, I spent four years developing and architecting the core systems—specifically <strong>Spectra</strong> (Image Engine) and <strong>Encore</strong> (Syndication)—that deliver your content to millions.</p>
 
                         <p>But my heart has always been in the storytelling.</p>
 
-                        <p>I am applying for the <strong>Web Developer</strong> role to make a strategic pivot: to take my deep understanding of performance (scaling to 1 billion+ images/month) and apply it to the creative frontend. My goal is to build interactive features that don't just dazzle, but load instantly.</p>
+                        <p>I am applying for the <strong>Web Developer</strong> role to make a strategic pivot: to take my deep understanding of the behind the scenes of storytelling and apply it to the creative frontend. My goal is to build interactive features that don't just dazzle, but load instantly.</p>
 
                         <p>My recent work architecting the <strong>Knowledge Graph Dashboard for the British Music Experience</strong> demonstrates this hybrid capability. I didn't just build a database; I designed a semantic search interface that allows visitors to explore 50 years of music history intuitively.</p>
 
@@ -126,7 +126,7 @@
         <section id="resume" class="content-section">
             <div class="flex justify-between items-end mb-8 border-b border-gray-200 pb-4">
                 <div>
-                    <h2 class="text-3xl font-bold serif text-gray-900">Experience Strategy</h2>
+                    <h2 class="text-3xl font-bold serif text-gray-900">Projects</h2>
                     <p class="text-gray-500 mt-1">Toggle lens: <span class="font-semibold text-red-600">Creative</span> vs <span class="font-semibold text-gray-700">Engineering</span></p>
                 </div>
                 <div class="flex bg-gray-100 p-1 rounded-lg">
@@ -140,27 +140,41 @@
                 
                 <!-- Main Column -->
                 <div class="lg:col-span-2 space-y-10">
-                    
-                    <!-- Role 1: BME (The Hero Project) -->
+
+                    <!-- Role: Reliance IQ -->
                     <div class="relative pl-8 border-l-2 border-red-200">
                         <div class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-red-600"></div>
                         <div class="flex flex-col sm:flex-row sm:justify-between sm:items-baseline mb-2">
-                            <h3 class="text-2xl font-bold text-gray-900">Lead Creative Technologist (Contract)</h3>
-                            <span class="text-sm font-mono text-gray-500">2024 - Present</span>
+                            <h3 class="text-2xl font-bold text-gray-900">Lead Software Engineer</h3>
+                            <span class="text-sm font-mono text-gray-500">Sep 2025 – Present</span>
+                        </div>
+                        <p class="text-lg text-gray-700 font-medium mb-4">Reliance IQ</p>
+                        <ul class="list-disc pl-5 space-y-2 text-gray-600">
+                            <li>Leading the front-end implementation of a complex pricing application for OEM teams.</li>
+                            <li>Collaborating closely with the design team to translate wireframes into responsive, user-friendly interfaces.</li>
+                            <li>Established engineering best practices for the front-end team to ensure code quality.</li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Role 1: BME (The Hero Project) -->
+                    <div class="relative pl-8 border-l-2 border-gray-200">
+                        <div class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-gray-400"></div>
+                        <div class="flex flex-col sm:flex-row sm:justify-between sm:items-baseline mb-2">
+                            <h3 class="text-2xl font-bold text-gray-900">Creative Technologist</h3>
+                            <span class="text-sm font-mono text-gray-500">July 2025 - September 2025</span>
                         </div>
                         <p class="text-lg text-gray-700 font-medium mb-4">British Music Experience (BME) Platform</p>
                         
                         <!-- Creative View Bullets -->
                         <ul class="resume-creative list-disc pl-5 space-y-2 text-gray-600">
                             <li><strong>Interaction Design:</strong> Architected the "MusicGraph" semantic search dashboard, transforming flat archive data into an interactive visual journey for museum visitors.</li>
-                            <li><strong>Data Visualization:</strong> Implemented force-directed graphs to visualize connections between artists, genres, and eras (e.g., Bowie → Glam Rock → 70s).</li>
+                            <li><strong>Data Visualization:</strong> Implemented directed graphs to visualize connections between artists, genres, and eras (e.g., Bowie → Glam Rock → 70s).</li>
                             <li><strong>Headless Architecture:</strong> Built a bespoke frontend on React/Next.js consuming a Strapi Headless CMS, ensuring total design freedom detached from backend constraints.</li>
                         </ul>
 
                         <!-- Engineering View Bullets -->
                         <ul class="resume-engineering hidden list-disc pl-5 space-y-2 text-gray-600">
                             <li><strong>Knowledge Graph:</strong> Designed the underlying graph database schema to enable semantic querying capabilities over the museum's collection.</li>
-                            <li><strong>Performance:</strong> Optimized complex React renders using memoization and virtualization to handle thousands of data nodes at 60fps.</li>
                             <li><strong>Scalability:</strong> Engineered the platform backbone including the Strapi CMS and robust API ecosystem.</li>
                         </ul>
                     </div>
@@ -200,6 +214,7 @@
                         </div>
                         <p class="text-gray-700 font-medium mb-4">Zee5 (Streaming Platform)</p>
                         <ul class="list-disc pl-5 space-y-2 text-gray-600 text-sm">
+                            <li>Developed reusable components and ensured an intuitive interface for users</li>
                             <li>Developed PWA features for a streaming service with 70M+ users.</li>
                             <li>Optimized video player load times for low-bandwidth mobile networks using SSR and code-splitting.</li>
                         </ul>
@@ -335,7 +350,7 @@
                         <div class="absolute top-0 right-0 bg-red-100 text-red-800 text-[10px] font-bold px-2 py-1 uppercase rounded-bl">Winner Hackathon '24</div>
                         <h4 class="font-bold text-gray-900 text-lg mb-1">EEAT Content Analysis</h4>
                         <p class="text-sm text-gray-600 mb-3">
-                            Developed a prototype tool to score editorial content against Google's <strong>EEAT (Expertise, Trust)</strong> guidelines using NLP.
+                            Developed a prototype tool to score editorial content against Google's <strong>EEAT (Experience, Expertise, Authoritativeness, and Trustworthiness)</strong> guidelines using Gen AI.
                         </p>
                         <ul class="text-xs text-gray-500 list-disc pl-4 space-y-1">
                             <li>Created a dashboard for editors to pre-visualize SEO impact.</li>
@@ -347,7 +362,7 @@
                     <div class="bg-white p-6 rounded-xl border border-gray-200 shadow-sm">
                          <h4 class="font-bold text-gray-900 text-lg mb-1">Global SEO & Discoverability</h4>
                          <p class="text-sm text-gray-600">
-                             Automated the <strong>Hreflang generation</strong> system across 30+ markets. While backend-heavy, this directly powered the frontend "Language Switchers" and discoverability for international editions of Vogue and WIRED.
+                             Automated the <strong>Hreflang generation</strong> system across 30+ markets. While backend-heavy, this directly powered the frontend discoverability for international editions of Vogue and WIRED and other Condé Nast brands.
                          </p>
                     </div>
                 </div>
