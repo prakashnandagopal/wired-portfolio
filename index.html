@@ -404,6 +404,7 @@
     <script>
         // --- NAVIGATION LOGIC ---
         function navTo(sectionId) {
+            window.scrollTo(0, 0);
             document.querySelectorAll('.content-section').forEach(el => el.classList.remove('active'));
             document.getElementById(sectionId).classList.add('active');
             
@@ -452,6 +453,7 @@
         }
 
         document.addEventListener("DOMContentLoaded", function() {
+            navTo('manifesto');
             // --- CHART 1: SKILLS RADAR (Chart.js) ---
             const ctxSkills = document.getElementById('skillsChart').getContext('2d');
             
